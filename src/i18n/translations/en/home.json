@@ -1,0 +1,58 @@
+{
+  "mennoLabs": "Menno Labs",
+  "hero": {
+    "menno": "Menno",
+    "labs": "Labs",
+    "hi": "Hi, I'm Menno 👋",
+    "description": "a fullstack developer from the picturesque country of the Netherlands, known for its tulip fields, windmills, and innovative technology. I'm passionate about building beautiful, scalable, and maintainable web applications."
+  },
+  "features": {
+    "modernApps": {
+      "title": "Modern Apps",
+      "description": "I build modern web applications using the latest technologies and best practices. I focus on creating scalable, maintainable, and user-friendly applications."
+    },
+    "tailoredDesign": {
+      "title": "Tailored Design",
+      "description": "I design and develop custom web applications tailored to your needs. I focus on creating a unique user experience that aligns with your brand."
+    },
+    "seoFriendly": {
+      "title": "SEO Friendly",
+      "description": "I build web applications with SEO in mind. I focus on creating applications that are search engine friendly and rank well in search results."
+    }
+  },
+  "services": {
+    "title": "I handle just about everything",
+    "description": "I offer a wide range of services to help you build, launch, and maintain your web application. From design and development to deployment and maintenance, I've got you covered.",
+    "services": {
+      "development": {
+        "title": "Development",
+        "description": "I develop custom web applications using the latest technologies and best practices. I focus on creating scalable, maintainable, and user-friendly applications."
+      },
+      "design": {
+        "title": "Design",
+        "description": "I design custom web applications tailored to your needs. I focus on creating a unique user experience that aligns with your brand."
+      },
+      "deployment": {
+        "title": "Deployment and Hosting",
+        "description": "I deploy and host web applications on reliable and secure servers. I focus on creating applications that are fast, reliable, and secure."
+      },
+      "maintenance": {
+        "title": "Maintenance",
+        "description": "I provide ongoing maintenance and support for web applications. I focus on keeping your application up-to-date, secure, and running smoothly."
+      },
+      "fullStack": {
+        "title": "Full Stack Development",
+        "description": "I offer full stack development services, handling both the front-end and back-end of web applications. I focus on creating seamless user experiences and robust server-side logic."
+      },
+      "everythingElse": {
+        "title": "Everything Else",
+        "description": "I offer a wide range of other services to help you build, launch, and maintain your web application. From landing pages, e-commerce or AI powered apps, I've got you covered."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to get started?",
+    "description": "I'm excited to help you build, launch, and maintain your web application. Let's work together to create something amazing!",
+    "button": "Contact Me"
+  }
+}
