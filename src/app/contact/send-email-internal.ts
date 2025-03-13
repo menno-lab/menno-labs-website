@@ -1,27 +1,16 @@
-import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
-
-const region = process.env.AWS_REGION;
-
-const sesClient = new SESClient({ region });
+import { Resend } from "resend";
 
 const adminEmail = "menno@menno-labs.com";
 
+const resend = new Resend(process.env.RESEND_API_KEY);
+
 export async function sendInternalEmail(message: string) {
-  const command = new SendEmailCommand({
-    Source: adminEmail,
-    Destination: {
-      ToAddresses: [adminEmail],
-    },
-    Message: {
-      Body: {
-        Text: {
-          Data: message,
-        },
-      },
-      Subject: {
-        Data: `MENNO-LABS-[${process.env.NODE_ENV?.toUpperCase()}]`,
-      },
-    },
+  const subject = `MENNO-LABS-[${process.env.NODE_ENV?.toUpperCase()}]`;
+
+  return await resend.emails.send({
+    from: "notifications@transactional.menno-labs.com",
+    to: adminEmail,
+    subject,
+    html: `<p>${message}</p>`,
   });
-  return await sesClient.send(command);
 }

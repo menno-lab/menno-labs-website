@@ -29,10 +29,10 @@ export function ContactForm() {
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
-      email: "",
-      company: "",
-      message: "",
+      name: "menno test",
+      email: "menno@menno-labs.com",
+      company: "menno-labs",
+      message: "menno test",
     },
   });
 
