@@ -8,6 +8,7 @@ import { CSPostHogProvider } from "@/providers/posthog";
 import { Suspense } from "react";
 import { PostHogPageView } from "@/providers/posthog-pageview";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Menno Labs | Software Developer for Hire",
@@ -24,17 +25,26 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <CSPostHogProvider>
-        <body className={cn("bg-white antialiased h-full w-full")}>
-          <NextIntlClientProvider messages={messages}>
-            <Navbar />
-            {children}
-            <Footer />
-          </NextIntlClientProvider>
-          <Suspense fallback={<div>Loading...</div>}>
-            <PostHogPageView />
-          </Suspense>
+        <body
+          className={cn("min-h-screen bg-background antialiased h-full w-full")}
+        >
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NextIntlClientProvider messages={messages}>
+              <Navbar />
+              {children}
+              <Footer />
+            </NextIntlClientProvider>
+            <Suspense fallback={<div>Loading...</div>}>
+              <PostHogPageView />
+            </Suspense>
+          </ThemeProvider>
         </body>
       </CSPostHogProvider>
     </html>

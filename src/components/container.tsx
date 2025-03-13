@@ -9,9 +9,5 @@ export function Container({
   children,
   className,
 }: React.PropsWithChildren<ContainerProps>) {
-  return (
-    <main className={cn("bg-white min-h-screen antialiased px-6", className)}>
-      {children}
-    </main>
-  );
+  return <main className={cn("px-6", className)}>{children}</main>;
 }

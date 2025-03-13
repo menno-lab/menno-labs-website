@@ -9,7 +9,7 @@ export interface InputProps
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, variant = "outline", type, ...props }, ref) => {
     const variantClasses = {
-      outline: "",
+      outline: "dark:border-zinc-700",
       ghost: "border-0 focus-visible:outline-0",
       underline:
         "rounded-none border-0 border-b-2 focus:border-b-2 focus:border-primary focus:outline-none",

@@ -16,7 +16,7 @@ export default function ContactPage() {
   const t = useTranslations("contact");
 
   return (
-    <Container className="min-h-72 py-8">
+    <Container className="min-h-[calc(100vh-20rem)] py-8 lg:pt-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 max-w-[83rem] mx-auto px-4 ">
         <div className="flex flex-col gap-4">
           <EnvelopeSimple className="w-8 h-8" />

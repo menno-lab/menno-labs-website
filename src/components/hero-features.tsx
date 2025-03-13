@@ -38,12 +38,8 @@ function Card({ title, description, icon }: any) {
         {icon}
       </div>
       <div className="content-container">
-        <h2 className="font-bold text-sm text-zinc-700 tracking-wide mb-3">
-          {title}
-        </h2>
-        <h4 className="text-zinc-700 text-sm leading-6 font-normal">
-          {description}
-        </h4>
+        <h2 className="font-bold text-sm tracking-wide mb-3">{title}</h2>
+        <h4 className="text-sm leading-6 font-normal">{description}</h4>
       </div>
     </div>
   );
